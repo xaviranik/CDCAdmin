@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e8e8e8</color>
+    <color name="colorPrimaryDark">#0f2d55</color>
+    <color name="colorAccent">#d75a4a</color>
+
+    <color name="backgroundBase" >#1b4e94</color>
+    <color name="textColorLight" >#e8e8e8</color>
+    <color name="textColorHint">#82e8e8e8</color>
+    <color name="textColorHintDark">#64000000</color>
+
+    <color name="UIcolorLight">#113463</color>
+    <color name="UIcolorDark">#0f2d55</color>
+</resources>

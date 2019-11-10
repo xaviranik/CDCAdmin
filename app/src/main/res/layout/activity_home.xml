@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/headerimagefinal" />
+
+    <ImageView
+        android:id="@+id/buttonOverlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha=".1"
+        android:translationZ="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/currentOrderButton"
+        app:layout_constraintEnd_toEndOf="@+id/currentOrderButton"
+        app:layout_constraintStart_toStartOf="@+id/currentOrderButton"
+        app:layout_constraintTop_toTopOf="@+id/currentOrderButton"
+        app:srcCompat="@drawable/shape_square" />
+
+    <ImageView
+        android:id="@+id/overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha=".4"
+        app:layout_constraintBottom_toBottomOf="@+id/headerImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/shape_square" />
+
+    <ImageView
+        android:id="@+id/topbar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:alpha=".5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/overlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/shape_square" />
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:text="Admin Panel"
+        android:textColor="@color/textColorLight"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/topbar"
+        app:layout_constraintTop_toTopOf="@+id/topbar" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".75" />
+
+    <Button
+        android:id="@+id/incomingOrderButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button_light"
+        android:fontFamily="@font/lato"
+        android:text="Incoming Orders"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/activeOrdersButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_button_light"
+        android:fontFamily="@font/lato"
+        android:text="Active Orders"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/incomingOrderButton"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/trackingOrderButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/custom_button_light"
+        android:fontFamily="@font/lato"
+        android:text="Tracking Orders"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incomingOrderButton" />
+
+    <Button
+        android:id="@+id/currentOrderButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/custom_button_light"
+        android:fontFamily="@font/lato"
+        android:text="Current Order"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/trackingOrderButton"
+        app:layout_constraintTop_toBottomOf="@+id/activeOrdersButton" />
+
+    <ImageView
+        android:id="@+id/incomingIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/trackingOrderButton"
+        app:layout_constraintEnd_toStartOf="@+id/activeOrdersButton"
+        app:layout_constraintStart_toStartOf="@+id/incomingOrderButton"
+        app:layout_constraintTop_toTopOf="@+id/incomingOrderButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/incoming" />
+
+    <ImageView
+        android:id="@+id/activeIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="@+id/activeOrdersButton"
+        app:layout_constraintStart_toStartOf="@+id/activeOrdersButton"
+        app:layout_constraintTop_toTopOf="@+id/activeOrdersButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/washing" />
+
+    <ImageView
+        android:id="@+id/trackingIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/trackingOrderButton"
+        app:layout_constraintStart_toStartOf="@+id/trackingOrderButton"
+        app:layout_constraintTop_toTopOf="@+id/trackingOrderButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/run" />
+
+    <ImageView
+        android:id="@+id/currentOrderIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/currentOrderButton"
+        app:layout_constraintStart_toStartOf="@+id/currentOrderButton"
+        app:layout_constraintTop_toTopOf="@+id/currentOrderButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/currentorder" />
+
+</android.support.constraint.ConstraintLayout>

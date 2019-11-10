@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CDCAdmin</string>
+
+    <string-array name="itemCategory">
+        <item>Men</item>
+        <item>Ladies</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>
